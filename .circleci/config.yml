@@ -17,9 +17,9 @@ jobs:
                   paths:
                       - ./node_modules
             - run:
-                  command: npm run build
-            - run:
                   command: npm run test
+            - run:
+                  command: npm run build
             - run: |
                   if [ "$CIRCLE_BRANCH" = "firebase" ]; then
                       ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
