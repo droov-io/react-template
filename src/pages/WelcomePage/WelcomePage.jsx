@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/styles";
 import DataCard from "components/DataCard";
 import MyCard from "components/MyCard";
 import MyCardFunctionalComponent from "components/MyCardFunctionalComponent";
+import PageLayout from "components/PageLayout";
 
 import projectData from "../../res/projectData.json";
 
@@ -21,6 +22,7 @@ function WelcomePage() {
     const classes = useStyles();
 
     return (
+        <PageLayout>
         <Grid container spacing={3} className={classes.gridContainerStyles}>
             <Grid item xs={3}></Grid>
             <Grid item xs={6}>
@@ -36,6 +38,7 @@ function WelcomePage() {
             </Grid>
             <Grid item xs={3}></Grid>
         </Grid>
+        </PageLayout>
     );
 }
 
