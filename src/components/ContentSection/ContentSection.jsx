@@ -3,7 +3,7 @@ import { Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
 import WelcomePage from "pages/WelcomePage";
-import Page1 from "pages/Page1";
+import Page2 from "pages/Page2";
 
 const useStyles = makeStyles(() => ({
     paperStyles: {
@@ -17,7 +17,7 @@ function ContentSection() {
 
     return (
         <Paper className={classes.paperStyles}>
-            <Page1 />
+            <Page2 />
         </Paper>
     );
 }
