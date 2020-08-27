@@ -1,8 +1,8 @@
 import React from 'react'
 import PageLayout from 'components/PageLayout';
 import Table from "components/Table";
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import TableInput from "components/TableInput";
+import Map from "components/Map";
 
 class Page1 extends React.Component {
 
@@ -43,38 +43,12 @@ class Page1 extends React.Component {
         return (
             <PageLayout>
                 <Table data={this.state.data}/>
-                <div style={{
-                    display: "flex",
-                    width: "80%",
-                    justifyContent: "space-between",
-                    marginTop: "20px"
-                }}>
-                    <TextField
-                        id="filled-number"
-                        label="Longtitude"
-                        type="number"
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
-                        variant="filled"
-                        name="longtitude"
-                        value={this.state.longtitude}
-                        onChange={this.handleChange}
-                    />
-                    <TextField
-                        id="filled-number"
-                        label="Latitude"
-                        type="number"
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
-                        variant="filled"
-                        name="latitude"
-                        value={this.state.latitude}
-                        onChange={this.handleChange}
-                    />
-                    <Button variant="contained" style={{width: "25%"}} onClick={this.handleSubmit}>Add</Button>
-                </div>
+                <TableInput 
+                    handleChange={this.handleChange} 
+                    handleSubmit={this.handleSubmit} 
+                    longtitude={this.state.longtitude}
+                    latitude={this.state.latitude}/>
+                <Map data={this.state.data}/>
             </PageLayout>
         )
     }
